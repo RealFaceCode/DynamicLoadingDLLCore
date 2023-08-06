@@ -71,7 +71,7 @@ MakeFuncDefine(int, add_t, add, int, int)
 
 void loadFunction(DLL dll)
 {
-    LoadFunc(dll, sayHello_t, sayHello)
+    LoadFunc(dll, sayHello_t, sayHello);
     LoadFunc(dll, add_t, add);
 }
 
