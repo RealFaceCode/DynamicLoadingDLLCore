@@ -53,15 +53,9 @@ int main()
         // Load the function from the DLL
         LoadFunc(dll, MyFunctionSignature, MyFunction);
 
-        if (MyFunction)
-        {
-            int result = MyFunction(42);
-            std::cout << "Result: " << result << std::endl;
-        }
-        else
-        {
-            std::cerr << "Failed to load function MyFunction" << std::endl;
-        }
+        // No check for a nullptr necessary because a std::runtime_error is thrown if the function is not loaded
+        int result = MyFunction(42);
+        std::cout << "Result: " << result << std::endl;
 
         DLL_Close(dll);
     }
