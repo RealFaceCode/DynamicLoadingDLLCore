@@ -16,7 +16,7 @@ This repository contains a C++ header file that provides cross-platform dynamic 
 
 To use the dynamic loading functionality provided by this header, follow these steps:
 
-1. Include the `DynamicLoadingDLLCore.h` header in your C++ project.
+1. Include the `DLL.h` header in your C++ project.
 2. Use the `DLL` type for managing the loaded library.
 3. Define function signatures using the `MakeFuncDefine` macro.
 4. Load functions from the DLL using the `LoadFunc` macro.
