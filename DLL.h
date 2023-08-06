@@ -1,5 +1,8 @@
 #ifndef DYNAMICLOADING_DLL_CORE_H
 #define DYNAMICLOADING_DLL_CORE_H
+#include <iostream>
+#include <filesystem>
+
 #ifdef _WIN32
     #include <windows.h>
     typedef HINSTANCE DLL_Type;
