@@ -27,12 +27,12 @@ When compiling the library that you intend to dynamically load, you should defin
 
 #### On Windows
 ```bash
-g++ -o mylibrary.dll -DLIB_EXPORTS mylibrary.cpp -shared
+g++ -std=c++17 -o mylibrary.dll -DLIB_EXPORTS mylibrary.cpp -shared
 ```
 
 #### On Unix-like systems (Linux)
 ```bash
-g++ -o libmylibrary.so -DLIB_EXPORTS mylibrary.cpp -shared
+g++ -std=c++17 -fPIC -o mylibrary.so -DLIB_EXPORTS mylibrary.cpp -shared
 ```
 
 ### Examples
