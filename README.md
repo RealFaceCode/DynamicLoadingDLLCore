@@ -21,6 +21,20 @@ To use the dynamic loading functionality provided by this header, follow these s
 3. Define function signatures using the `MakeFuncDefine` macro.
 4. Load functions from the DLL using the `LoadFunc` macro.
 
+### Compiling the Library to be Dynamically Loaded
+
+When compiling the library that you intend to dynamically load, you should define the `LIB_EXPORTS` macro to export the necessary symbols. Here's an example of how you can define `LIB_EXPORTS` during compilation:
+
+#### On Windows
+```bash
+g++ -o mylibrary.dll -DLIB_EXPORTS mylibrary.cpp -shared
+```
+
+#### On Unix-like systems (Linux)
+```bash
+g++ -o libmylibrary.so -DLIB_EXPORTS mylibrary.cpp -shared
+```
+
 ### Examples
 
 ```cpp
